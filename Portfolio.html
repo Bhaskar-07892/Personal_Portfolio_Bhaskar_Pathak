@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Bhaskar Pathak </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24450f78ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="Web's Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header_text">
+                <p> Data Scientist </p>
+                <h1>Hi , I am <br> <span>Bhaskar</span> Pathak </h1>
+            </div>
+
+        </div>
+    </div>
+
+
+<!----------------about--------------> 
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+                <img src="images/user.png" alt="User">
+            </div>
+            <div class="col2">
+
+            <h1 class="sub-title">About Me</h1>
+
+                <p>Entry-level AI/ML Engineer with a strong foundation in building intelligent systems and solving real-world problems through data-driven approaches. Passionate about developing scalable AI solutions, continuously learning, and contributing to impactful projects. Focused on clean logic, structured workflows, and practical implementation of modern AI techniques. </p> <br>
+
+                <div class="tittles-info">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>Programing</span><br>Python , SQL , C and C++ (basic) </li>
+                        <li><span>Data Tool</span><br>Pandas , Numpy , Matplotlib , Seaborn </li>
+                        <li><span>ML Tool</span><br>Scikit-Learn , Jupiter Notebook </li>
+                        <li><span>Other Tool</span><br>Git , Power BI (basic) , Streamlit</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="projects">
+                    <ul>
+                        <li>
+                            <span>Oil Price Predictor</span><br>
+                            Python , YFinance , Scikit-learn , HTML/CSS/JS <br>
+                            <a href="https://oil-price-predictor-ew8t.onrender.com/" target="_blank">Live Demo</a>
+                        </li>
+
+                        <li>
+                            <span>Research Paper Recommendation</span><br>
+                            Python , Scikit-learn , Sentence Transformers , Streamlit <br>
+                            <a href="https://ai-research-paper-finder.streamlit.app/" target="_blank">Live Demo</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>BCA</span><br>Ossmania University</li>
+                        <li><span>12<sup>th</sup></span><br>G.I.C Singali</li>
+                        <li><span>10<sup>th</sup></span><br>G.I.C Singali</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------services--------------> 
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>Machine Learning Development</h2>
+                <p>Building end-to-end ML models, data pipelines, and predictive systems using Python, Scikit-Learn, and modern ML workflows. Experience in model training, tuning, deployment, and real-world problem solving.</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>Data Science & Analytics</h2>
+                <p>Data cleaning, exploration, visualization, and statistical insights using Pandas, NumPy, Matplotlib, Seaborn & Power BI. Turning raw data into meaningful and actionable insights.</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web App Integration (AI/ML)</h2>
+                <p>Creating interactive AI-powered web apps using Streamlit, HTML/CSS/JS, and API integration. Capable of deploying ML models into simple and user-friendly web interfaces.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------contact-------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">My Contacts</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> bhaskarpathak5607@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9027640664</p>
+                <div class="social-icon">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>                    
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name " required>
+                    <input type="email" name="Email" placeholder="Your Email " required>
+                    <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        
+        </div>
+
+        <p class="copyright">
+            &copy; 2025 Personal Portfolio - Bhaskar Pathak . Made with ❤️ by <strong>Bhaskar</strong>.
+        </p>
+
+    </div>
+</div>
+
+
+<script>
+
+// ----------------about-------------- 
+
+var tablinks = document.getElementsByClassName("tab-links")
+var tabcontents = document.getElementsByClassName("tab-content")
+
+function opentab(tabname){
+    for (tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+// ----------------Sidemenu-------------- 
+
+var sidemenu = document.getElementById("sidemenu")
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+</script>
+
+
+<script>
+
+// ----------------Form-------------- 
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxex-SwdLGz3yV1-9TzY6qOWYWZ7Xe0X87chAGUEbPK7oNCNTcERpSsuFel105rZ6vn9g/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    msg.innerHTML = "⏳ Sending message...";
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "✅ Message sent successfully!";
+            setTimeout(() => { msg.innerHTML = ""; }, 5000);
+            form.reset();
+        })
+        .catch(error => {
+            msg.innerHTML = "❌ Failed to send message!";
+            console.error('Error!', error.message);
+        });
+});
+</script>
+
+
+</body>
+</html>
